@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NAME=("AJAY","KUMAR","REDDY") #index starts from 0 and size of array NAME is 3
+NAME=("AJAY" "KUMAR" "REDDY") #index starts from 0 and size of array NAME is 3
 
 echo "first name: ${NAME[0]}"
 echo "middle name: ${NAME[1]}"
