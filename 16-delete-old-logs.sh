@@ -21,9 +21,9 @@ SOURCE_DIR="/home/ec2-user/app-logs"  #from this path needs to dlt files
 #     else 
 #       echo -e "$2... $G success $N"
 #     fi
-# }
+# # }
 
-echo "script started exceuting.. $TIMESTAMP" &>>$LOG_FILE_NAME
+# echo "script started exceuting.. $TIMESTAMP" &>>$LOG_FILE_NAME
 
 FILES_TO_DELETE=$(find $SOURCE_DIR -name "*.log" -mtime +14)
-echo "Files to be deleted: $FILES_TO_DELETE \n"
+echo "Files to be deleted: $FILES_TO_DELETE"
