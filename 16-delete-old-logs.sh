@@ -6,6 +6,8 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
+SOURCE_DIR="/home/ec2-user/app-logs"  #from this path needs to dlt files
+
 LOGS_FOLDER="/var/log/shellscript-logs"
 LOG_FILE=$(echo $0 | cut -d "." -f1)
 TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
@@ -23,21 +25,5 @@ VALIDATE(){
 
 echo "script started exceuting.. $TIMESTAMP" &>>$LOG_FILE_NAME
 
-if [ $USERID -ne 0 ]
-  then
-     echo "ERROR: you must have sudo access to excute this script"
-     exit 1 #other than 0 we have to give here to exit the script from here
-fi
-
-for package in $@
-do
-  dnf list installed $package &>>$LOG_FILE_NAME
-  if [ $? -ne 0 ]
-  then 
-    dnf install $package -y &>>$LOG_FILE_NAME
-    VALIDATE $? "Installing $package"
-  else
-    echo -e "$package already $Y...installed $N"
-  fi
-done
-
+FILES_TO_DELETE=$(find $SOURCE_DIR "*.log" +mtime +14)
+echo "Files to be deleted: $FILES_TO_DELETE"
