@@ -38,5 +38,17 @@ then
   USAGE
 fi
 
+if [ ! -d $SOURCE_DIR ]
+then
+  echo -e "$R $SOURCE_DIR $N is not correct...please check"
+  exit 1
+fi
+
+if [ ! d $DEST_DIR ]
+then
+ echo -e "$R $DEST_DIR $N is not correct...please check"
+ exit 1
+fi
+
 echo "script started exceuting.. $TIMESTAMP" &>>$LOG_FILE_NAME
 
