@@ -52,3 +52,11 @@ fi
 
 echo "script started exceuting.. $TIMESTAMP" &>>$LOG_FILE_NAME
 
+FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
+
+if [ -n $FILES ]
+then
+  echo "Files are : $FILES"
+else 
+  echo "No Files to zip"
+fi
