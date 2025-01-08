@@ -44,7 +44,7 @@ then
   exit 1
 fi
 
-if [ ! d $DEST_DIR ]
+if [ ! -d $DEST_DIR ]
 then
  echo -e "$R $DEST_DIR $N is not correct...please check"
  exit 1
