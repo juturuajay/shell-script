@@ -24,6 +24,7 @@ done <<< $DISK_USAGE
 FORMATTED_MSG=$(echo -e "$MSG")
 
 echo -e "Message:\n$FORMATTED_MSG"
+echo -e "hello test"
 
 # Sending email
 echo -e "$FORMATTED_MSG" | mutt -s "High Disk Usage" kumarreddyj007@gmail.com
