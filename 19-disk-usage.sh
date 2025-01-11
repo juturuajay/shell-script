@@ -18,7 +18,7 @@ done <<< $DISK_USAGE
 
 echo -e "Messages are: $MSG"
 
-echo "$MSG" | mutt -s "High Disk Usage" kumarreddyj007@gmail.com
+echo -e "$MSG" | mutt -s "High Disk Usage" kumarreddyj007@gmail.com
 
 #  Replace \n with actual newlines for clean output
 # FORMATTED_MSG=$(echo -e "$MSG")
