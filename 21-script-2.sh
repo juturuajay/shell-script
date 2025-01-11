@@ -3,6 +3,4 @@
 MSG="message from script2"
 
 echo $MSG
-echo $GREET
-
-
+echo $GREET # Access the GREET variable exported from script1
