@@ -16,15 +16,12 @@ do
 
 done <<< $DISK_USAGE
 
-# echo -e "Message: $MSG"
+echo -e "Message: $MSG"
 
-# echo "$MSG" | mutt -s "High Disk Usage" kumarreddyj007@gmail.com
+echo "$MSG" | mutt -s "High Disk Usage" kumarreddyj007@gmail.com
 
-# Replace \n with actual newlines for clean output
-FORMATTED_MSG=$(echo -e "$MSG")
-
-echo -e "Message:\n$FORMATTED_MSG"
-echo -e "hello test"
-
-# Sending email
-echo -e "$FORMATTED_MSG" | mutt -s "High Disk Usage" kumarreddyj007@gmail.com
+#  Replace \n with actual newlines for clean output
+# FORMATTED_MSG=$(echo -e "$MSG")
+# echo -e "Message:\n$FORMATTED_MSG"
+# # Sending email
+# echo -e "$FORMATTED_MSG" | mutt -s "High Disk Usage" kumarreddyj007@gmail.com
