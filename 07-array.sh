@@ -6,4 +6,4 @@ echo "first name: ${NAME[0]}"
 echo "middle name: ${NAME[1]}"
 echo "last name: ${NAME[2]}"
 
-echo "full name: ${NAME[@]}"
+echo "full name: ${NAME[@]}"  # here @ is all
